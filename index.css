@@ -1,0 +1,83 @@
+<style>
+        /* --- CUSTOM CSS --- */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #eff6ff; /* Biru sangat muda */
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            font-weight: 600;
+            background: white;
+            border: 1px solid #fce7f3;
+        }
+
+        .calendar-day:hover {
+            background-color: #fbcfe8;
+        }
+
+        /* Hari ini */
+        .calendar-day.today {
+            border: 2px solid #1d4ed8; /* Biru tua */
+            color: #1d4ed8;
+        }
+
+        /* Hari terpilih */
+        .calendar-day.selected {
+            background-color: #dbeafe; /* Biru muda */
+            border: 2px solid #3b82f6; /* Biru */
+        }
+
+        /* Indikator Haid */
+        .period-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #1d4ed8; /* Biru tua */
+            border-radius: 50%;
+            margin-top: 4px;
+        }
+
+        .period-active {
+            background-color: #dbeafe; /* Biru background untuk hari haid */
+            color: #1d4ed8;
+        }
+        
+        .symptom-tag {
+            transition: all 0.2s;
+        }
+        .symptom-checkbox:checked + .symptom-tag {
+            background-color: #3b82f6; /* Biru */
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        /* Logo Bulan Gradasi */
+        .fa-moon.logo-gradasi {
+            background: linear-gradient(to bottom, #1e40af, #60a5fa); /* Biru tua ke biru muda */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Sembunyikan scrollbar tapi tetap bisa scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
